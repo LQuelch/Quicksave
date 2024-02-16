@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <link rel="stylesheet" href="index.css" />
+
+  <title>Quicksave</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="toolbar">
+      <a id="settings" href="index.html">Back</a>
+    </div>
+    <div class="main">
+      <form action="">
+        <label>Use WSL:</label>
+        <input type="checkbox" name="wsl" id="wsl" />
+        <br />
+        <label>Setup type:</label>
+        <select name="setup" id="setup" type="text">
+          <option value="qa">QA</option>
+          <option value="dev">Dev</option>
+        </select>
+        <br />
+        <label>Mysql executable:</label>
+        <input name="mysqlPath" id="mysqlPath" type="text" />
+        <input name="mysqlPathPicker" id="mysqlPathPicker" type="file" />
+        <br />
+        <label>Mysqldump executable:</label>
+        <input name="mysqldumpPath" id="mysqldumpPath" type="text" />
+        <input name="mysqldumpPathPicker" id="mysqldumpPathPicker" type="file" />
+        <br />
+        <label>MySQL username:</label>
+        <input name="username" id="username" /><br />
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="settings.js"></script>
+</body>
+
+</html>
