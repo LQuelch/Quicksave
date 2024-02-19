@@ -1,5 +1,5 @@
 const { contextBridge } = require('electron/renderer')
-const controller = require('./controller');
+const controller = require('./main/controller');
 const { ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('controller', controller);
