@@ -6,6 +6,9 @@ const save = document.getElementById('save');
 const saveList = document.getElementById('save-list');
 const listChildren = [];
 
+import "./index.css";
+
+
 function disableButtons() {
   loadingCover.hidden = false;
   quickload.setAttribute('disabled', true);

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <link rel="stylesheet" href="index.css" />
+
+  <title>Quicksave</title>
+<script defer src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-508481/preload.js"></script><script defer src="/index/preload.js"></script><link href="/index.css" rel="stylesheet"></head>
+
+<body>
+  <div class="loading-cover" id="loading-cover" hidden>
+    Loading...
+  </div>
+  <div class="container">
+    <div class="toolbar">
+      <div class="button-group">
+        <button id="quicksave">Quicksave</button>
+        <button id="quickload">Quickload</button>
+      </div>
+      <a id="settings" href="settings.html">Settings</a>
+    </div>
+    <div class="main">
+
+      <div class="save-bar">
+        <input name="save-name" id="save-name" placeholder="Save name" type="text">
+        <button id="save">Save</button>
+      </div>
+      <ul class="sidebar" id="save-list">
+
+      </ul>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

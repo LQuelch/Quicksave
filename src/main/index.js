@@ -1,6 +1,4 @@
-const { ipcMain } = require('electron')
-const { app, BrowserWindow } = require('electron/main')
-const path = require('node:path')
+const { ipcMain, BrowserWindow, app } = require('electron')
 const { dialog } = require('electron');
 const { mkdir, existsSync, writeFile, readdirSync } = require('node:fs');
 const mysql = require('./mysql');
@@ -17,12 +15,12 @@ const createWindow = () => {
     frame: true,
     autoHideMenuBar: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true
+      preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      nodeIntegration: false
     }
   })
 
-  win.loadFile('index.html')
+  win.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 
   ipcMain.on('quicksave', () => {
     mysql.dump(win, utils.dataDir + 'quicksave.sql');
