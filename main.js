@@ -3,8 +3,8 @@ const { app, BrowserWindow } = require('electron/main')
 const path = require('node:path')
 const { dialog } = require('electron');
 const { mkdir, existsSync, writeFile, readdirSync } = require('node:fs');
-const mysql = require('./mysql');
-const utils = require('./utils');
+const mysql = require('./src/utils/mysql');
+const utils = require('./src/utils/utils');
 
 if (require('electron-squirrel-startup')) app.quit();
 
@@ -22,7 +22,7 @@ const createWindow = () => {
     }
   })
 
-  win.loadFile('index.html')
+  win.loadFile('src/pages/index.html')
 
   ipcMain.on('quicksave', () => {
     mysql.dump(win, utils.dataDir + 'quicksave.sql');
