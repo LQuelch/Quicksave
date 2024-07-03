@@ -5,6 +5,8 @@ const rootDir = homedir() + '/quicksave/';
 const dataDir = rootDir + 'saves/';
 const settingsPath = rootDir + 'settings.json';
 
+console.log(dataDir);
+
 const getSettings = () => {
   const defaults = {
     mysqlPath: 'mysql',
